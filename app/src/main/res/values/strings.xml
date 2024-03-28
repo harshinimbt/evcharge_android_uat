@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">EVcharge</string>
+
+
+    <string name="welcome">Welcome Back</string>
+    <string name="enter_text">Enter your email and password to\naccess your account</string>
+    <string name="new_here">Are you new here?</string>
+    <string name="register_text">Register with your mobile number to\ncreate your account</string>
+    <string name="full_name">Full Name*</string>
+    <string name="enter_full_name">Enter your full name</string>
+    <string name="mobile">Mobile Number*</string>
+    <string name="enter_mob_no">Enter your mobile number </string>
+    <string name="agree_text">\"By signing up you are agreeing to our</string>
+    <string name="terms_conditions"><u>terms and conditions.\"</u></string>
+    <string name="register">Register</string>
+    <string name="already_have_acc">Already have an account?</string>
+    <string name="login"> Login</string>
+    <string name="otp_sent">OTP has been sent to your mobile number</string>
+    <string name="verify">Verify</string>
+    <string name="didnt_recieve_code">Didn’t receive code?</string>
+    <string name="resend">Resend</string>
+    <string name="create_pass">Create Password</string>
+    <string name="create_new_pass">Create New Password</string>
+    <string name="new_pass">New Password*</string>
+    <string name="confirm_pass">Confirm Password*</string>
+    <string name="enter_pass">Enter your Password</string>
+    <string name="save">Save</string>
+    <string name="enter">Enter your new password to\ncomplete registration</string>
+    <string name="enter_otp_to_verify">Enter the OTP to verify it is you</string>
+    <string name="enter_new_pass">Enter your new password to access\nyour account</string>
+    <string name="pass_validation">Password must have minimum 8 and maximum 12 character. It must include at least 1 Uppercase,1 Lowercase,1 numeric and 1 special character.</string>
+
+    <string name="welcome_back">Welcome Back</string>
+    <string name="enter_mob">Enter your mobile number and\npassword to login to your account</string>
+    <string name="password">Password*</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_pass">Forgot Password</string>
+    <string name="dont_have_acc">Don’t have an account?</string>
+    <string name="login_with">Login with</string>
+    <string name="otp">OTP</string>
+    <string name="enter_to_verify">Enter your mobile number to verify it is you</string>
+    <string name="enter_otp">Enter the OTP to login to your account</string>
+    <string name="submit">Submit</string>
+    <string name="remember_pass">Remembered  your password?</string>
+
+
+    <string name="find_station">Find your charging station\nwith Evcharge Today</string>
+    <string name="pick_station">Pick the nearest station</string>
+    <string name="locate_now">Locate Now</string>
+    <string name="saved_stations">Saved\nEv Stations</string>
+    <string name="reachable_area">Reachable\nArea</string>
+    <string name="recent_recharges">Recent\nRecharges</string>
+    <string name="social_media">Share on\nSocial media</string>
+    <string name="complete_profile">Complete your\nVehicle Profile</string>
+    <string name="updates">Get real time updates</string>
+
+    <string name="saved_ev_stations">Saved Ev Stations</string>
+    <string name="clear_all">Clear all</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="text_delete">This action cannot be undone.\nThe image will be deleted on confirming.</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="recent_recharge">Recent Recharges</string>
+    <string name="nearby_stations">Nearby Ev Stations </string>
+    <string name="are_you_leaving">Are you leaving?</string>
+    <string name="logout_text">You are attempting to\nlogout of Evcharge.</string>
+
+    <string name="vehicles">Vehicles</string>
+    <string name="name_vehicle">Name your vehicle</string>
+
+    <string name="vehicle_type">Vehicle Type</string>
+    <string name="select">Select</string>
+    <string name="brand">Brand</string>
+    <string name="model">Model</string>
+    <string name="variant">Variant</string>
+    <string name="color">Color</string>
+    <string name="year_of_release">Year of Release</string>
+    <string name="motor_type">Motor Type</string>
+    <string name="connector_type">Connector Type</string>
+    <string name="ac_power">AC Power</string>
+    <string name="dc_power">DC Power</string>
+    <string name="battery_name">Battery Name</string>
+
+    <string name="account">Account</string>
+    <string name="profile">Profile</string>
+    <string name="update_profile">Update your user profile details </string>
+    <string name="charger">My Chargers</string>
+    <string name="personal_charger">Add your personal chargers here</string>
+    <string name="settings">Settings</string>
+    <string name="settings_changes">Make changes to your settings here</string>
+    <string name="faq">FAQ</string>
+    <string name="question">Have a question?</string>
+    <string name="terms">Terms of use</string>
+    <string name="view_terms">View Evcharge terms of use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="view_privacy_policy">View Evcharge privacy policy</string>
+    <string name="logout">Logout</string>
+
+    <string name="name">Name</string>
+    <string name="mob">Mobile Number</string>
+    <string name="email">Email</string>
+    <string name="pincode">Pin Code</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="town">Town/ Village</string>
+    <string name="address">Address</string>
+    <string name="information">Additional Information</string>
+
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp_des">One-Time Password has been to\nyour registered mobile number.\nPlease verify it is you to update your\nmobile number.</string>
+    <string name="didnt_recieve_otp">Didn’t receive OTP?</string>
+    <string name="resend_otp">Resend OTP</string>
+
+    <string name="find_station_splash">Find your charging station with Evcharge Today</string>
+    <string name="allow_location">Allow Location Service</string>
+    <string name="need_location">We need your location to get you\nnearby Ev Charging stations.</string>
+    <string name="allow_access">Allow Access</string>
+    <string name="dont_allow">Don’t Allow</string>
+
+    <string name="locate">Locate</string>
+    <string name="charge">Charge</string>
+    <string name="pay">Pay</string>
+    <string name="locate_des">Select the nearest charging station on\nthe map or search the one according\nto your need.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="create_acc">Create an account</string>
+
+    <string name="remove_station">This action cannot be undone.\nThe station will be removed from the list.</string>
+
+    <string name="reachable">Reachable Area</string>
+
+    <string name="navigate">Navigate</string>
+    <string name="share">Share</string>
+    <string name="available">Available</string>
+    <string name="no_recharge">There are no\nrecent recharges</string>
+    <string name="update_recharge">Update recent recharge </string>
+    <string name="update_recent_recharge">Recent Recharge</string>
+
+    <string name="pick_vehicle">Pick the vehicle recharged</string>
+    <string name="search_station">Search Ev Station</string>
+    <string name="enter_connector_type">Enter connector type</string>
+    <string name="enter_kw">Enter kW</string>
+    <string name="enter_units_charged">Enter units charged</string>
+    <string name="enter_amount_paid">Enter the amount paid </string>
+    
+    <string name="update_level">Update Level</string>
+    <string name="start_analysing">Start Analysing</string>
+    <string name="update_battery_level">Update latest battery level here to analyze</string>
+    <string name="pick_direction">Pick a direction you want to go</string>
+
+    <string name="manage_ev">Manage your saved\nlist of Ev stations</string>
+    <string name="low_battery">Vehicle Battery Level\nis low, recharge now.</string>
+</resources>

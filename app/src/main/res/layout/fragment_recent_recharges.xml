@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left_arrow"
+            android:layout_marginTop="5dp"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textFontWeight="600"
+            android:layout_marginStart="70dp"
+            style="@style/HeaderStyle"
+            android:textColor="@color/black"
+            android:text="@string/recent_recharge"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:background="@null"
+            android:src="@drawable/add_ic" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:background="@drawable/spinner_border_line"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/SpinDays"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="340dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@null"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        app:hintEnabled="false"-->
+<!--        app:hintTextColor="@color/white">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/SpinnerDays"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:background="@drawable/spinner_border_line"-->
+<!--            android:clickable="true"-->
+<!--            android:drawableEnd="@drawable/down_arrow_ic"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:drawableTint="@color/black"-->
+<!--            android:focusable="false"-->
+<!--            android:hint="Last 30 days"-->
+<!--            android:textColorHint="@color/black" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecentRecharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_recharge_ic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            style="@style/HeaderTextStyle"
+            android:textColor="@color/grey"
+            android:textFontWeight="600"
+            android:text="@string/no_recharge"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

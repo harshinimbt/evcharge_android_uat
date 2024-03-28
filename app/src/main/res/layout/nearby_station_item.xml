@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/saved_item"/>
+        <LinearLayout
+            android:id="@+id/llNearbyStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvStationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ItemTextStyle"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:text="Tanishq, Koramangala"/>
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GreyItemTextStyle"
+                android:textFontWeight="600"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/grey"
+                android:text="#3, 17th Main, 5th Block, Koramangala"/>
+            <TextView
+                android:id="@+id/tvKms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/GreyItemTextStyle"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:text="3.83 kms away"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/ibUnsaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_gravity="top"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/unsaved"/>
+        <ImageButton
+            android:id="@+id/ibSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:visibility="gone"
+            android:layout_gravity="top"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/saved"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/border_grey" />
+</LinearLayout>
