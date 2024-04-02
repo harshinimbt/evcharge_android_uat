@@ -2,6 +2,9 @@ package com.example.evcharge.Storage;
 
 public class Constants {
     public static final String baseUrl ="https://dev-services-app.evcharge.ac/";
+    public static String authorization = "2024202420242024";
+
+    public static String appName = "app-ev";
     public static final String passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$*]).{8,12}$";
     public static Boolean getPasswordValidate(String password) {
         if (password.trim().contentEquals("") || password.trim().length() < 8

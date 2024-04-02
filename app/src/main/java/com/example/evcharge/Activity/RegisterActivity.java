@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.evcharge.Model.ErrorResponse;
 import com.example.evcharge.Model.RegisterRequest;
 import com.example.evcharge.Model.RegisterResponse;
 import com.example.evcharge.R;
@@ -79,23 +80,31 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerRequest.setNewPassword(etCreatePassword.getText().toString());
         registerRequest.setConfirmPassword(etConfirmPassword.getText().toString());
 
-        apiInterface.getRegisterResponse(registerRequest).enqueue(new Callback<RegisterResponse>() {
+        apiInterface.getRegisterResponse(Constants.authorization,Constants.appName,registerRequest).enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                 if (response.isSuccessful()){
                     Intent intent = new Intent(RegisterActivity.this, VerifyActivity.class);
                     startActivity(intent);
+                    finish();
                 }else{
-//                    Toast.makeText(getApplicationContext(),red)
+                    try {
+                        Type type = new TypeToken<ErrorResponse>() {
+                        }.getType();
+                        Gson gson = new Gson();
+                        ErrorResponse errorResponse = gson.fromJson(response.errorBody().string(),type);
+                        Toast.makeText(getApplicationContext(),errorResponse.getMessage(),Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
-
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
 
+
             }
         });
-
 
     }
 

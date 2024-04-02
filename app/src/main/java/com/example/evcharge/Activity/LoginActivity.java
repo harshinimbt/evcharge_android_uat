@@ -11,9 +11,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.evcharge.Model.ErrorResponse;
+import com.example.evcharge.Model.LoginRequest;
+import com.example.evcharge.Model.LoginResponse;
 import com.example.evcharge.R;
+import com.example.evcharge.Retrofit.APIClient;
+import com.example.evcharge.Retrofit.APIInterface;
 import com.example.evcharge.Storage.Constants;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     AppCompatButton btnLogin;
@@ -21,11 +34,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText etMobileNumber;
     TextInputEditText etPassword;
     CheckBox cbRemember;
+    APIInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        apiInterface = APIClient.getClient().create(APIInterface.class);
 
         btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(this);
@@ -48,8 +64,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()){
             case R.id.btnLogin:
                 if (validateLogin()){
-                startActivity(new Intent(LoginActivity.this, PanelActivity.class));
-                finish();
+                    Login();
                 }
                 break;
             case R.id.tvRegister:
@@ -62,6 +77,41 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
                 break;
         }
+    }
+
+    private void Login() {
+        LoginRequest loginRequest =  new LoginRequest();
+        loginRequest.setMobileNumber(etMobileNumber.getText().toString());
+        loginRequest.setPassword(etPassword.getText().toString());
+
+        apiInterface.getLoginResponse(Constants.authorization,Constants.appName,loginRequest).enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if (response.isSuccessful()){
+                    startActivity(new Intent(LoginActivity.this, PanelActivity.class));
+                    finish();
+                }else{
+                    try {
+                        Type type = new TypeToken<ErrorResponse>() {
+                        }.getType();
+                        Gson gson = new Gson();
+                        ErrorResponse errorResponse = gson.fromJson(response.errorBody().string(),type);
+                        Toast.makeText(getApplicationContext(),errorResponse.getMessage(),Toast.LENGTH_SHORT).show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+            }
+        });
+
+
+
+
     }
 
     private Boolean validateLogin() {

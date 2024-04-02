@@ -100,7 +100,7 @@
                     android:textFontWeight="400"
                     android:maxLines="1"
                     style="@style/EditTextStyle"
-                    android:maxLength="8"
+                    android:maxLength="12"
                     android:hint="@string/enter_pass"
                     />
             </com.google.android.material.textfield.TextInputLayout>

@@ -124,7 +124,7 @@
                     android:imeOptions="flagNoExtractUi"
                     app:hintTextColor="@color/white"
                     android:textFontWeight="400"
-                    android:maxLength="8"
+                    android:maxLength="12"
                     android:maxLines="1"
                     style="@style/EditTextStyle"
                     android:hint="@string/enter_pass"
@@ -164,7 +164,7 @@
                     app:hintTextColor="@color/white"
                     android:padding="15dp"
                     android:textFontWeight="400"
-                    android:maxLength="8"
+                    android:maxLength="12"
                     android:maxLines="1"
                     style="@style/EditTextStyle"
                     android:hint="@string/enter_pass" />
